@@ -36,6 +36,11 @@ var generateFortuneCookie = function() {
   //Create element to display
   var newFortuneElement = document.createElement("P");
   //Choose which fortune to use
+  //Check to see if all fortunes have been shown
+  if (fortuneList == []) {
+    fortuneList == usedList;
+    usedList.splice(0,usedList.length);
+  }
     //Random using math .floor
   var fortuneNumber = Math.floor(Math.random() * fortuneList.length)
   var fortuneText = fortuneList[fortuneNumber];
@@ -60,6 +65,7 @@ var generateFortuneCookie = function() {
 var fortuneList = [
     "People are naturally attracted to you.",
     "You learn from your mistakes... You will learn a lot today.",
+    "Ain't nothing to it but to do it!",
     "If you have something good in your life, don't let it go!",
     "What ever you're goal is in life, embrace it visualize it, and for it will be yours.",
     "Your shoes will make you happy today.",
