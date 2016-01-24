@@ -47,7 +47,7 @@ var generateFortuneCookie = function() {
   //Add fortune text to the element
   newFortuneElement.innerHTML = fortuneText;
   //Replace default text or current fortune w/ new fortune
-  fortuneElement = document.getElementByID("js-fortuneText");
+  fortuneElement = document.getElementById("js-fortuneText");
   fortuneElement.innerHTML = fortuneText;
   //Add new fortune element to previous fortunes list by creating LI w/ same text
   var newUsedFortune = document.createElement("LI");
