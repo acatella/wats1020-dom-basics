@@ -4,10 +4,52 @@ html {
     text-align: center;
     padding: 2em;
     font-family: Arial, Helvetica, sans-serif;
+    min-width: 675px;
+}
+
+
+* {
+-mox-box-sizing: border-box;
+Box-sizing: border-box
+Padding: 0;
+Margin: 0;
+}
+
+ul {
+  list-style: none;
+
+}
+
+/*GENERAL*/
+
+.centered-text {
+  text-align: center;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 .fortune-cookie-saying-wrapper {
     border: 1px solid #666;
     padding: 1em;
     margin: 1em;
+}
+
+.btn {
+  background: #0099cc;
+  color: #fff;
+  padding: 8px 26px;
+  text-decoration: none;
+  margin: none;
+}
+
+.btn-list {
+  margin-top: 15px;
+}
+
+.btn-list li{
+  display: inline-block;
+  padding: 5px;
+
 }

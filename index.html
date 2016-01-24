@@ -11,7 +11,23 @@
     </head>
     <body>
         <h1>Fortune Cookie Generator</h1>
-        <p>Use this page to generate fortune cookie sayings.</p>
+        <div class="centered-text">
+          <p>
+            How many people just ate?
+          </p>
+
+          <ul class="btn-list">
+            <li><a href="#" class="btn">1</a></li><li>
+              <a href="#" class="btn">2</a></li><li>
+                <a href="#" class="btn">3</a></li>
+          </ul>
+          <ul class="btn-list">
+            <li><a href="#" class="btn">4</a></li><li>
+              <a href="#" class="btn">5</a></li><li>
+                <a href="#" class="btn">6</a></li>
+          </ul>
+
+        </div>
         <div class="fortune-cookie-saying-wrapper">
             <p id="js-fortuneText">Click the button to generate a saying.</p>
         </div>
@@ -21,7 +37,7 @@
         </button>
         <hr>
         <h2>Previous Fortunes</h2>
-        <ul id="previous-fortunes-container">
+        <ul id="js-previousFortunes">
         <!-- TODO: Modify javascript so previously generated fortunes are listed here. -->
         </ul>
         <script type="text/javascript" src="fortune-cookie-generator.js"></script>
