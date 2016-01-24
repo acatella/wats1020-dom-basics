@@ -40,7 +40,7 @@ var generateFortuneCookie = function() {
   var fortuneNumber = Math.floor(Math.random() * fortuneList.length)
   var fortuneText = fortuneList[fortuneNumber];
     //Remove chosen fortune from fortuneList
-  fortuneList.splice(fortuneNumber, fortuneNumer + 1);
+  fortuneList.splice(fortuneNumber, fortuneNumber + 1);
     //Add chosen fortune to a new array, usedList
   var usedList = [];
   usedList.push(fortuneText);
