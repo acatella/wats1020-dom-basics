@@ -37,9 +37,7 @@ var generateFortuneCookie = function() {
   var newFortuneElement = document.createElement("P");
   //Choose which fortune to use
     //Random using math .floor
-  window.alert(fortuneList.length);
   var fortuneNumber = Math.floor(Math.random() * fortuneList.length)
-  window.alert(fortuneNumber);
   var fortuneText = fortuneList[fortuneNumber];
 
     //Remove chosen fortune from fortuneList
