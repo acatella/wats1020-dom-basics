@@ -45,7 +45,8 @@ var generateFortuneCookie = function() {
     //Add chosen fortune to a new array, usedList
   var usedList = [];
   usedList.push(fortuneText);
-  //Add fortune text to the element
+  //Add fortune text to the element, set ID
+  newFortuneElement.setAttribute("id","js-fortuneText");
   newFortuneElement.innerHTML = fortuneText;
   //Replace default text or current fortune w/ new fortune
   fortuneElement = document.getElementById("js-fortuneText");
