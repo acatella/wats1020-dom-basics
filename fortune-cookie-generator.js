@@ -43,7 +43,7 @@ var generateFortuneCookie = function() {
   var fortuneText = fortuneList[fortuneNumber];
 
     //Remove chosen fortune from fortuneList
-  fortuneList.splice(fortuneNumber, fortuneNumber + 1);
+  fortuneList.splice(fortuneNumber, 1);
     //Add chosen fortune to a new array, usedList
   var usedList = [];
   usedList.push(fortuneText);
