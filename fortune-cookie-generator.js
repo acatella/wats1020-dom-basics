@@ -37,7 +37,7 @@ var generateFortuneCookie = function() {
   var newFortuneElement = document.createElement("P");
   //Choose which fortune to use
   //Check to see if all fortunes have been shown
-  if (fortuneList == []) {
+  if (!(fortuneList[0])) {
     fortuneList == usedList;
     usedList.splice(0,usedList.length);
   }
