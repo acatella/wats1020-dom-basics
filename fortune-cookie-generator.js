@@ -42,9 +42,16 @@ var generateFortuneCookie = function() {
     //Remove chosen fortune from fortuneList
   fortuneList.splice(fortuneNumber, fortuneNumer + 1);
     //Add chosen fortune to a new array, usedList
+  var usedList = [];
+  usedList.push(fortuneText);
   //Add fortune text to the element
+  newFortuneElement.innerHTML = fortuneText;
   //Replace default text or current fortune w/ new fortune
+  fortuneElement = document.getElementByID("js-fortuneText");
+  fortuneElement.innerHTML = fortuneText;
   //Add new fortune element to previous fortunes list by creating LI w/ same text
+  var newUsedFortune = document.createElement("LI");
+  newUsedFortune.innerHTML = fortuneText;
 }
 
 // The following data list is provided for you to use in your code.
