@@ -8,7 +8,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="main.css">
-        <script type="text/javascript" src="fortune-cookie-generator.js"></script>
     </head>
     <body>
         <h1>Fortune Cookie Generator</h1>
@@ -17,7 +16,7 @@
             <p id="js-fortuneText">Click the button to generate a saying.</p>
         </div>
         <!-- TODO: Make this button execute the `generateFortuneCookie()` function. -->
-        <button class="generate-button">
+        <button class="generate-button" onclick="generateFortuneCookie()">
             Make My Fortune!
         </button>
         <hr>
@@ -25,5 +24,6 @@
         <ul id="previous-fortunes-container">
         <!-- TODO: Modify javascript so previously generated fortunes are listed here. -->
         </ul>
+        <script type="text/javascript" src="fortune-cookie-generator.js"></script>
     </body>
 </html>
