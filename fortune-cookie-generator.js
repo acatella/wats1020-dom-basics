@@ -4,7 +4,7 @@
 //
 //////////////////////////////////////////
 
-var generateFortuneCookie = function() {
+
     // This is where your code for the Fortune Cookie generator goes.
     // You will use the fortunesList variable defined lower in this file
     // to supply your fortune cookies with text.
@@ -26,10 +26,29 @@ var generateFortuneCookie = function() {
     // `Math.random()` to accomplish this.) Use this data to update the
     // `innerText` of the `#fortune-cookie-text` element.
 
+    //TODO STRETCH:
+    // Prevent duplicate fortunes
+    // Style the page nicely
+    // Show usage stats
+    // Fortunes for multiple people?
+
+var generateFortuneCookie = function() {
+  //Create element to display
+  var newFortuneElement = document.createElement("P");
+  //Choose which fortune to use
+    //Random using math .floor
+  var fortuneNumber = Math.floor(Math.random() * fortuneList.length)
+  var fortuneText = fortuneList[fortuneNumber];
+    //Remove chosen fortune from fortuneList
+  fortuneList.splice(fortuneNumber, fortuneNumer + 1);
+    //Add chosen fortune to a new array, usedList
+  //Add fortune text to the element
+  //Replace default text or current fortune w/ new fortune
+  //Add new fortune element to previous fortunes list by creating LI w/ same text
 }
 
 // The following data list is provided for you to use in your code.
-var fortunesList = [
+var fortuneList = [
     "People are naturally attracted to you.",
     "You learn from your mistakes... You will learn a lot today.",
     "If you have something good in your life, don't let it go!",
