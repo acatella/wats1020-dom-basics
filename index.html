@@ -1,47 +1,37 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Fortune Cookie Generator</title>
-        <meta name="description" content="This page generates fortune cookie sayings.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
-        <h1>Fortune Cookie Generator</h1>
-        <div class="centered-text">
-          <p>
-            How many people just ate?
-          </p>
-
-          <ul class="btn-list">
-            <li><a href="#" class="btn" onclick="howManyAte(1)">1</a></li><li>
-              <a href="#" class="btn" onclick="howManyAte(2)">2</a></li><li>
-                <a href="#" class="btn" onclick="howManyAte(3)">3</a></li>
-          </ul>
-          <ul class="btn-list">
-            <li><a href="#" class="btn" onclick="howManyAte(4)">4</a></li><li>
-              <a href="#" class="btn" onclick="howManyAte(5)">5</a></li><li>
-                <a href="#" class="btn" onclick="howManyAte(6)">6</a></li>
-          </ul>
-
-        </div>
-        <div class="fortune-cookie-saying-wrapper" id="js-fortuneParent">
-            <p id="js-fortuneText">Click the button to generate a saying.</p>
-        </div>
-        <div>
-          <a class="generate-button btn" onclick="generateFortuneCookie(numberOfFortunes)">
-              Make My Fortune!
-          </a>
-        </div>
-
-        <hr>
-        <h2>Previous Fortunes</h2>
-        <ul id="js-previousFortunes">
-        <!-- TODO: Modify javascript so previously generated fortunes are listed here. -->
-        </ul>
-        <script type="text/javascript" src="fortune-cookie-generator.js"></script>
-    </body>
+<head>
+  <title>Fortune Cookie Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="grey">
+  <div class="flex-container">
+    <div class="flex-object">
+      <h1>Fortune Cookie Generator</h1>
+    </div>
+    <div class="flex-object bottom-margin">
+      <h2>How many people just ate?</h2>
+    </div>
+    <div class="flex-object btn-row">
+      <a onclick="howManyAte(1)" class="btn pink">1</a>
+      <a onclick="howManyAte(2)" class="btn pink">2</a>
+      <a onclick="howManyAte(3)" class="btn pink">3</a>
+    </div>
+    <div class="flex-object btn-row">
+      <a onclick="howManyAte(4)" class="btn pink">4</a>
+      <a onclick="howManyAte(5)" class="btn pink">5</a>
+      <a onclick="howManyAte(6)" class="btn pink">6</a>
+    </div>
+    <h2 class="underline flex-object">Your Fortune</h2>
+    <div class="flex-object" id="js-fortuneParent">
+      <p id="js-fortuneText">Click the button to generate a saying.</p>
+    </div>
+    <a onclick="generateFortuneCookie(numberOfFortunes)" class="flex-object btn pink gen-btn">Generate Fortune</a>
+    <h2 class="underline flex-object">Previous Fortunes</h2>
+    <div id="js-previousFortunes" class="flex-object">
+      <ul></ul>
+    </div>
+  </div>
+  <script type="text/javascript" src="fortune-cookie-generator.js"></script>
+</body>
 </html>

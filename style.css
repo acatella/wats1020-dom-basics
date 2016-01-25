@@ -1,0 +1,77 @@
+* {
+-moz-box-sizing: border-box;
+box-sizing: border-box
+padding: 0;
+margin: 0;
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+font-weight: 300;
+}
+
+/* Color */
+.grey {
+  background: rgb(233, 233, 233);
+}
+
+.pink {
+  background: rgb(255, 123, 122);
+  color: #FFF2F0;
+}
+
+/* Flex Styling */
+
+.flex-container {
+  display: flex;
+  flex-flow: column nowrap;
+  min-width: 510px;
+  max-width: 815px;
+  margin: auto;
+}
+
+.flex-object {
+  flex: 1 auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-row {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 70%;
+  margin: auto;
+}
+
+.btn {
+  flex: 1 auto;
+  text-align: center;
+}
+
+/* General */
+
+a:hover {
+  background: rgb(251, 157, 157);
+  cursor: pointer;
+}
+
+a:active {
+  background: rgba(255, 123, 122,.8);
+}
+
+.btn {
+  padding: 8px 0;
+  margin: 2.5px;
+}
+
+.gen-btn {
+  width: 70%;
+  margin: 20px auto 0 auto;
+}
+
+.bottom-margin {
+  margin-bottom: 20px;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+
+}
