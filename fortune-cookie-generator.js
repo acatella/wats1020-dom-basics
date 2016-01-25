@@ -2,9 +2,6 @@
 // Fortune Cookie Generator
 // by Afi C. Clark
 
-    //TODO STRETCH:
-    // Style the page nicely
-    // Show usage stats
 
 //Decides how many people need fortunes
 var numberOfFortunes = 1;
@@ -60,6 +57,7 @@ var generateFortuneCookie = function(numAte) {
   previousFortunes = document.getElementById("js-previousFortunes");
   previousFortunes.appendChild(newUsedFortune);
 
+  //function calls itself until no more fortunes are needed
   generateFortuneCookie(numAte - 1);
 }
 }
