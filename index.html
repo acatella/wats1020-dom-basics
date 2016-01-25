@@ -17,24 +17,26 @@
           </p>
 
           <ul class="btn-list">
-            <li><a href="#" class="btn">1</a></li><li>
-              <a href="#" class="btn">2</a></li><li>
-                <a href="#" class="btn">3</a></li>
+            <li><a href="#" class="btn" onclick="howManyAte(1)">1</a></li><li>
+              <a href="#" class="btn" onclick="howManyAte(2)">2</a></li><li>
+                <a href="#" class="btn" onclick="howManyAte(3)">3</a></li>
           </ul>
           <ul class="btn-list">
-            <li><a href="#" class="btn">4</a></li><li>
-              <a href="#" class="btn">5</a></li><li>
-                <a href="#" class="btn">6</a></li>
+            <li><a href="#" class="btn" onclick="howManyAte(4)">4</a></li><li>
+              <a href="#" class="btn" onclick="howManyAte(5)">5</a></li><li>
+                <a href="#" class="btn" onclick="howManyAte(6)">6</a></li>
           </ul>
 
         </div>
-        <div class="fortune-cookie-saying-wrapper">
+        <div class="fortune-cookie-saying-wrapper" id="js-fortuneParent">
             <p id="js-fortuneText">Click the button to generate a saying.</p>
         </div>
-        <!-- TODO: Make this button execute the `generateFortuneCookie()` function. -->
-        <button class="generate-button" onclick="generateFortuneCookie()">
-            Make My Fortune!
-        </button>
+        <div>
+          <a class="generate-button btn" onclick="generateFortuneCookie(numberOfFortunes)">
+              Make My Fortune!
+          </a>
+        </div>
+
         <hr>
         <h2>Previous Fortunes</h2>
         <ul id="js-previousFortunes">

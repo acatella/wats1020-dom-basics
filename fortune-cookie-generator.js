@@ -5,7 +5,6 @@
     //TODO STRETCH:
     // Style the page nicely
     // Show usage stats
-    // Fortunes for multiple people?
 
 //Decides how many people need fortunes
 var numberOfFortunes = 1;
@@ -13,7 +12,9 @@ function howManyAte(input) {
   numberOfFortunes = input;
 }
 
-var generateFortuneCookie = function() {
+var generateFortuneCookie = function(numAte) {
+  //Do we need any more fortunes?
+  if (numAte>0){
   //Create element to display and usedList
   var newFortuneElement = document.createElement("P");
 
@@ -39,15 +40,28 @@ var generateFortuneCookie = function() {
   newFortuneElement.setAttribute("id","js-fortuneText");
   newFortuneElement.innerHTML = fortuneText;
 
-  //Replace default text or current fortune w/ new fortune
+  //If this is a new set of fortunes, clear the list
   fortuneElement = document.getElementById("js-fortuneText");
-  fortuneElement.parentNode.replaceChild(newFortuneElement,fortuneElement);
+  fortuneParent =document.getElementById("js-fortuneParent");
+
+
+  if (numAte == numberOfFortunes) {
+    while (fortuneParent.hasChildNodes()) {
+      fortuneParent.removeChild(fortuneParent.firstChild);
+    }
+  }
+
+  fortuneParent.appendChild(newFortuneElement);
+
 
   //Add new fortune element to previous fortunes list by creating LI w/ same text
   var newUsedFortune = document.createElement("LI");
   newUsedFortune.innerHTML = fortuneText;
   previousFortunes = document.getElementById("js-previousFortunes");
   previousFortunes.appendChild(newUsedFortune);
+
+  generateFortuneCookie(numAte - 1);
+}
 }
 
 // Data lists

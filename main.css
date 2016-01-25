@@ -9,10 +9,11 @@ html {
 
 
 * {
--mox-box-sizing: border-box;
-Box-sizing: border-box
-Padding: 0;
-Margin: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
 }
 
 ul {
@@ -28,6 +29,16 @@ ul {
 
 a:hover {
   cursor: pointer;
+}
+
+a:active {
+  background: rgb(0, 53, 104);
+}
+
+/*SPECIFIC*/
+
+.generate-button {
+  margin: 20px 0;
 }
 
 .fortune-cookie-saying-wrapper {
