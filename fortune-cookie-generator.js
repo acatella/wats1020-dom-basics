@@ -40,16 +40,14 @@ var generateFortuneCookie = function(numAte) {
   //If this is a new set of fortunes, clear the list
   fortuneElement = document.getElementById("js-fortuneText");
   fortuneParent =document.getElementById("js-fortuneParent");
-
-
   if (numAte == numberOfFortunes) {
     while (fortuneParent.hasChildNodes()) {
       fortuneParent.removeChild(fortuneParent.firstChild);
     }
   }
 
+  //add your new fortune to be displayed
   fortuneParent.appendChild(newFortuneElement);
-
 
   //Add new fortune element to previous fortunes list by creating LI w/ same text
   var newUsedFortune = document.createElement("LI");
