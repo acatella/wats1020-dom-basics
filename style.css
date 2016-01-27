@@ -75,3 +75,8 @@ a:active {
   text-decoration-style: dotted;
 
 }
+
+.active {
+  background: black;
+  color: white;
+}

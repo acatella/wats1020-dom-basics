@@ -7,6 +7,13 @@
 var numberOfFortunes = 1;
 function howManyAte(input) {
   numberOfFortunes = input;
+  var options = document.getElementsByClassName("option");
+  for (i = 0; i<options.length; i++) {
+    options[i].className = "option btn pink";
+    if (options[i].innerHTML == input) {
+      options[i].className += " active";
+    }
+  }
 }
 
 var generateFortuneCookie = function(numAte) {
