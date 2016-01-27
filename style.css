@@ -76,7 +76,7 @@ a:active {
 
 }
 
-.active {
-  background: black;
+.active, a.active:hover {
+  background: rgb(251, 157, 157);
   color: white;
 }

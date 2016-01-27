@@ -47,7 +47,6 @@ var generateFortuneCookie = function(numAte) {
   fortuneParent = document.getElementById("js-fortuneParent");
   if (numAte == numberOfFortunes) {
     fortuneParent.innerHTML="";
-    }
   }
 
   //add your new fortune to be displayed
@@ -61,8 +60,9 @@ var generateFortuneCookie = function(numAte) {
 
   //function calls itself until no more fortunes are needed
   generateFortuneCookie(numAte - 1);
+  }
 }
-}
+
 
 // Data lists
 var usedList = [];
