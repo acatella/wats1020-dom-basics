@@ -26,8 +26,7 @@ var generateFortuneCookie = function(numAte) {
     //Check to see if all fortunes have been shown
   if (fortuneList.length == 0) {
     //if so, build a new fortuneList array out of contents of usedList
-    usedStr = usedList.join("~~");
-    fortuneList = usedStr.split("~~");
+    fortuneList = usedList.slice();
     //clear the usedList array and previousFortunes list
     usedList.splice(0,usedList.length);
     previousFortunes.innerHTML = "";
@@ -41,15 +40,13 @@ var generateFortuneCookie = function(numAte) {
   usedList.push(fortuneText);
 
   //Add fortune text to the element, set ID
-  newFortuneElement.setAttribute("id","js-fortuneText");
+  newFortuneElement.setAttribute("class","fortuneText");
   newFortuneElement.innerHTML = fortuneText;
 
   //If this is a new set of fortunes, clear the list
-  fortuneElement = document.getElementById("js-fortuneText");
-  fortuneParent =document.getElementById("js-fortuneParent");
+  fortuneParent = document.getElementById("js-fortuneParent");
   if (numAte == numberOfFortunes) {
-    while (fortuneParent.hasChildNodes()) {
-      fortuneParent.removeChild(fortuneParent.firstChild);
+    fortuneParent.innerHTML="";
     }
   }
 
